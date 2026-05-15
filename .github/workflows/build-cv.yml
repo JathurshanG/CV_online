@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "CV.md"
+      - "cv.md"
       - "style.css"
       - ".github/workflows/build-cv.yml"
 
@@ -30,7 +30,7 @@ jobs:
       - name: Generate PDF
         run: |
           mkdir -p output
-          pandoc CV.md \
+          pandoc cv.md \
             -o output/CV_Jathurshan_Gnanaseelan_Benedict.pdf \
             --css=style.css \
             --pdf-engine=weasyprint \
