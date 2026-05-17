@@ -1,72 +1,71 @@
 @page {
   size: A4;
-  margin: 12mm 13mm;
+  margin: 11mm 12mm;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
-  line-height: 1.28;
+  line-height: 1.32;
   color: #111;
   margin: 0;
 }
 
 h1 {
   font-size: 22px;
-  margin: 0;
   text-align: center;
-  letter-spacing: 0.4px;
+  margin: 0;
+  letter-spacing: 0.6px;
 }
 
 h2 {
   font-size: 12px;
-  margin: 2px 0 8px;
   text-align: center;
+  margin: 2px 0 8px;
   font-weight: 600;
 }
 
-h1 + h2 {
-  border-bottom: none;
-}
-
-h1 + h2 + p,
 body > p:first-of-type {
   text-align: center;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   font-size: 9.5px;
 }
 
-h1,
-h2,
-h3 {
-  page-break-after: avoid;
-}
-
-h1:not(:first-child),
-h2:not(:first-of-type) {
-  text-align: left;
+hr {
+  border: none;
+  border-top: 1px solid #bbb;
+  margin: 8px 0;
 }
 
 h1:not(:first-child) {
   font-size: 13px;
+  text-align: left;
   text-transform: uppercase;
-  margin: 10px 0 4px;
-  padding-bottom: 2px;
+  margin: 13px 0 5px;
+  padding-bottom: 3px;
   border-bottom: 1px solid #999;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
 }
 
 h2:not(:first-of-type) {
-  font-size: 11px;
-  margin: 8px 0 2px;
-  text-transform: none;
+  font-size: 12px;
+  text-align: left;
+  margin: 9px 0 1px;
+  text-transform: uppercase;
   border-bottom: none;
 }
 
 h3 {
   font-size: 10.5px;
-  margin: 6px 0 2px;
+  margin: 5px 0 2px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 10px;
+  margin: 5px 0 2px;
   font-style: italic;
+  font-weight: 700;
 }
 
 p {
@@ -74,7 +73,7 @@ p {
 }
 
 ul {
-  margin: 2px 0 6px 16px;
+  margin: 2px 0 7px 15px;
   padding: 0;
 }
 
@@ -85,12 +84,6 @@ li {
 
 strong {
   font-weight: 700;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #bbb;
-  margin: 7px 0;
 }
 
 a {
