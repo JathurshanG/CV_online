@@ -5,117 +5,114 @@ Paris, France · g.jathurshan@gmail.com · LinkedIn · GitHub
 
 ---
 
-# PROFILE
+# PROFIL
 
-Data Engineer with 3+ years of experience designing, building, and maintaining data pipelines across consulting, startup, and public sector environments.
+Data Engineer avec plus de 3 ans d’expérience dans la conception, le développement et la maintenance de pipelines de données dans des environnements startup, conseil et secteur public.
 
-Strong experience with Python, SQL, PySpark, Airflow, Databricks, AWS S3, data quality, orchestration, and layered data architectures such as RDL, BDL, DWH, and DTM.
+Expérience solide sur Python, SQL, PySpark, Airflow, Databricks, AWS S3, la qualité de données, l’orchestration et les architectures de données de type RDL, BDL, DWH et DTM.
 
-Able to work across the full data lifecycle: ingestion, transformation, modeling, monitoring, reporting, and business-facing delivery.
-
----
-
-# TECHNICAL SKILLS
-
-**Languages:** Python, SQL  
-**Data Engineering:** ETL/ELT, Data Pipelines, Data Modeling, Data Quality, Batch Processing  
-**Processing:** Pandas, PySpark, Apache Airflow  
-**Cloud & Storage:** AWS S3, MongoDB, MySQL  
-**Architecture:** RDL, BDL, DWH, DTM, STG, Lakehouse  
-**BI & Analytics:** Power BI, Tableau, DigDash, Streamlit  
-**Ingestion:** REST APIs, SFTP, Web Scraping, Scrapy, Selenium  
-**Tools:** Linux, Git, Cron, SMTP
+Capacité à intervenir sur l’ensemble du cycle de vie de la donnée : ingestion, transformation, modélisation, monitoring, reporting et accompagnement métier.
 
 ---
 
-# PROFESSIONAL EXPERIENCE
+# COMPÉTENCES TECHNIQUES
+
+**Langages :** Python, SQL  
+**Data Engineering :** ETL / ELT, pipelines de données, modélisation de données, qualité de données, traitement batch  
+**Traitement de données :** Pandas, PySpark, Apache Airflow  
+**Cloud & Stockage :** AWS S3, MongoDB, MySQL  
+**Architecture :** RDL, BDL, DWH, DTM, STG, Lakehouse  
+**BI & Visualisation :** Power BI, Tableau, DigDash, Streamlit  
+**Ingestion :** API REST, SFTP, Web Scraping, Scrapy, Selenium  
+**Outils :** Linux, Git
+
+---
+
+# EXPÉRIENCES PROFESSIONNELLES
 
 ## Data Engineer — Act On Group
-**Paris · 2024 – Present**
+**Paris · 2024 – Aujourd’hui**
 
-### Total Energies
-- Maintained and optimized PySpark pipelines on Databricks using AWS S3 data sources.
-- Processed HR datasets to feed Power BI reporting and business dashboards.
-- Improved reliability of transformations and reporting pipelines.
-- Implemented data quality checks including format validation, consistency controls, and null handling.
+### TotalEnergies
+- Maintenance et optimisation de pipelines PySpark sur Databricks utilisant des sources AWS S3.
+- Traitement de données RH destinées à des reportings et tableaux de bord Power BI.
+- Amélioration de la fiabilité des transformations et des flux de reporting.
+- Mise en place de contrôles qualité automatisés : validation de formats, cohérence et gestion des valeurs nulles.
 
-### Ministry of Finance — CISIRH
-- Designed and built HR data marts for payroll and decision-support reporting.
-- Processed high-volume payroll and reference datasets within RDL → BDL → DTM architecture.
-- Developed Airflow DAGs to orchestrate payroll workflows with scheduling, dependencies, and BashOperator tasks.
-- Implemented monitoring, logging, and automated email alerting.
-- Built data quality controls including uniqueness checks, delta analysis, format validation, and anomaly detection.
-- Created dashboards to monitor rejected records and data anomalies.
+### Ministère des Finances — CISIRH
+- Conception et développement de data marts RH pour le reporting décisionnel et la paie.
+- Traitement de volumes importants de données de paie dans une architecture RDL → BDL → DTM.
+- Développement de DAGs Airflow pour orchestrer les traitements batch et les dépendances.
+- Mise en place du monitoring, des logs et des alertes automatiques par email.
+- Développement de contrôles qualité : unicité, analyse de delta, validation de formats et détection d’anomalies.
+- Création de tableaux de bord de suivi des rejets et anomalies de données.
 
-### Internal Data Projects
-- Developed SFTP ingestion pipelines for multi-client data integration.
-- Automated data retrieval from external servers using Python and Linux.
-- Built monitoring pipelines for Qlik Sense vulnerability tracking.
-- Implemented automated SMTP alerting systems.
+### Projets internes
+- Développement de pipelines d’ingestion SFTP pour l’intégration multi-clients.
+- Automatisation de récupération de données depuis des serveurs externes sous Linux.
+- Développement de pipelines de monitoring pour le suivi de vulnérabilités Qlik Sense.
 
 ---
 
 ## Data Engineer — Dr. Brandt
 **Paris · 2021 – 2024**
 
-### E-commerce BI Platform
-- Built ETL pipelines integrating Shopify, Google Analytics, Google Ads, SemRush, and Klaviyo.
-- Centralized multi-source business data into MongoDB.
-- Delivered Tableau dashboards for marketing, e-commerce, and business teams.
-- Identified SEO and UX performance issues contributing to website redesign initiatives.
+### Plateforme BI E-commerce
+- Développement de pipelines ETL intégrant Shopify, Google Analytics, Google Ads, SemRush et Klaviyo.
+- Centralisation de données multi-sources dans MongoDB.
+- Création de tableaux de bord Tableau pour les équipes marketing et e-commerce.
+- Identification de problèmes SEO et UX ayant contribué à une refonte du site web.
 
-### NLP SEO Tool
-- Developed keyword clustering pipelines using RoBERTa embeddings and K-Means.
-- Built Streamlit applications to support SEO analysis workflows.
-- Provided marketing teams with automated keyword grouping and content analysis tools.
+### Outil NLP SEO
+- Développement de pipelines de clustering de mots-clés via RoBERTa et K-Means.
+- Création d’applications Streamlit pour l’analyse SEO.
+- Mise à disposition d’outils d’automatisation pour les équipes marketing.
 
-### Sales Data Platform
-- Automated ingestion from APIs and email attachments.
-- Stored raw sales data in AWS S3 and processed it with Python and Pandas.
-- Unified US and EU sales datasets for business reporting.
-- Helped identify regional performance gaps and commercial underperformance.
+### Plateforme de données commerciales
+- Automatisation de l’ingestion via APIs et pièces jointes emails.
+- Stockage des données brutes dans AWS S3 puis traitement via Python et Pandas.
+- Consolidation des données de ventes US et Europe pour le reporting métier.
+- Identification d’écarts de performance entre régions.
 
-### Grey Market Detection System
-- Developed scraping pipelines using Scrapy, Selenium, EC2, and rotating proxies.
-- Built product matching workflows using embeddings and classification models.
-- Identified unauthorized resellers and distribution leakage patterns.
-- Delivered monitoring outputs to support commercial and legal actions.
-
----
-
-# PERSONAL PROJECTS
-
-## Financial Data Pipeline
-- Built an end-to-end pipeline ingesting SEC financial data into AWS S3.
-- Designed layered architecture from raw data to analytics-ready datasets.
-- Integrated portfolio tracking via external APIs.
-- Generated financial indicators for investment analysis.
-
-## E-commerce Review Analysis
-- Scraped Sephora product reviews and Q&A datasets.
-- Processed text data using NLP preprocessing techniques.
-- Built a Streamlit recommendation interface.
+### Système de détection de marché gris
+- Développement d’infrastructures de scraping avec Scrapy, Selenium, EC2 et proxies rotatifs.
+- Développement de workflows de matching produits via embeddings et modèles de classification.
+- Détection de revendeurs non autorisés et de fuites de distribution.
 
 ---
 
-# EDUCATION
+# PROJETS PERSONNELS
 
-## Master’s Degree — Statistics for Evaluation and Forecasting
+## Pipeline de données financières
+- Développement d’un pipeline d’ingestion de données financières via les APIs SEC.
+- Conception d’une architecture de données de type RDL → BDL → DWH.
+- Intégration de données de portefeuille via APIs externes.
+
+## Analyse d’avis e-commerce
+- Scraping d’avis clients et données Q&A Sephora.
+- Prétraitement NLP et analyse de texte.
+- Développement d’une interface de recommandation Streamlit.
+
+---
+
+# FORMATION
+
+## Master — Statistiques pour l’Évaluation et la Prévision
 Université de Reims Champagne-Ardenne
 
-## Bachelor’s Degree — Economics & Management
+## Licence — Économie et Gestion
 Université Paris 13
 
 ---
 
-# CERTIFICATIONS
+# CERTIFICATION
 
 SAS Base Certification
 
 ---
 
-# LANGUAGES
+# LANGUES
 
-French — Professional  
-English — Professional  
-Tamil — Native
+Français — Professionnel  
+Anglais — Professionnel  
+Tamoul — Langue maternelle
