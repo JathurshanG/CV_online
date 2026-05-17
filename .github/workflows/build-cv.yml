@@ -3,7 +3,7 @@ name: Build CV PDF
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - "cv.md"
       - "style.css"
@@ -22,31 +22,45 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Pandoc and WeasyPrint
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc weasyprint
 
+      - name: Generate metadata
+        run: |
+          echo "LAST_COMMIT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+          echo "BUILD_DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
       - name: Generate PDF
         run: |
           mkdir -p output
+
           pandoc cv.md \
             -o output/CV_Jathurshan_Gnanaseelan_Benedict.pdf \
             --css=style.css \
             --pdf-engine=weasyprint \
-            --metadata title="CV Jathurshan Gnanaseelan Benedict"
+            --metadata title="CV Jathurshan Gnanaseelan Benedict" \
+            --metadata last_commit="$LAST_COMMIT" \
+            --metadata build_date="$BUILD_DATE"
 
-      - name: Upload PDF artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cv-pdf
+          name: CV_PDF
           path: output/CV_Jathurshan_Gnanaseelan_Benedict.pdf
 
-      - name: Commit generated PDF
-        run: |
-          cp output/CV_Jathurshan_Gnanaseelan_Benedict.pdf ./CV_Jathurshan_Gnanaseelan_Benedict.pdf
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add CV_Jathurshan_Gnanaseelan_Benedict.pdf
-          git commit -m "Generate CV PDF" || echo "No changes to commit"
-          git push
+      - name: Create or update latest release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest CV
+          body: |
+            Automatically generated CV PDF.
+
+            Commit: ${{ env.LAST_COMMIT }}
+            Build date: ${{ env.BUILD_DATE }}
+          files: output/CV_Jathurshan_Gnanaseelan_Benedict.pdf
+          make_latest: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
