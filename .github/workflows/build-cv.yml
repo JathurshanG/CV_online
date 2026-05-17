@@ -1,18 +1,16 @@
+```yaml id="61s0gc"
 name: Build CV PDF
 
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - "cv.md"
       - "style.css"
       - ".github/workflows/build-cv.yml"
 
   workflow_dispatch:
-
-permissions:
-  contents: write
 
 jobs:
   build-pdf:
@@ -22,7 +20,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Pandoc and WeasyPrint
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y pandoc weasyprint
@@ -30,6 +28,7 @@ jobs:
       - name: Generate PDF
         run: |
           mkdir -p output
+
           pandoc cv.md \
             -o output/CV_Jathurshan_Gnanaseelan_Benedict.pdf \
             --css=style.css \
@@ -39,14 +38,6 @@ jobs:
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: cv-pdf
+          name: CV_PDF
           path: output/CV_Jathurshan_Gnanaseelan_Benedict.pdf
-
-      - name: Commit generated PDF
-        run: |
-          cp output/CV_Jathurshan_Gnanaseelan_Benedict.pdf ./CV_Jathurshan_Gnanaseelan_Benedict.pdf
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add CV_Jathurshan_Gnanaseelan_Benedict.pdf
-          git commit -m "Generate CV PDF" || echo "No changes to commit"
-          git push
+```
